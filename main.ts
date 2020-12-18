@@ -16,7 +16,7 @@ DigitalPin.P2,
 pins.setPull(DigitalPin.P8, PinPullMode.PullUp)
 music.setVolume(125)
 music.startMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once)
-game.startCountdown(10000)
+game.startCountdown(60000)
 game.setScore(0)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P8) == 1) {
@@ -31,5 +31,5 @@ basic.forever(function () {
         game.addScore(1)
     }
     tm.showNumber(game.score())
-    basic.showNumber(game.score())
+    basic.pause(500)
 })
