@@ -1,0 +1,23 @@
+{
+    "name": "投篮机v1.0",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "pxt-sonar": "github:zhandroids/sonarch#b1900dae3eeaba57b589d8276bba26eb9103d4bf",
+        "TM1637": "github:pxt-peijing/tm1637#5ebdd4c136252d2fa4f6589686ab1bb97a9569d8",
+        "microphone": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
