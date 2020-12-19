@@ -16,10 +16,11 @@ DigitalPin.P2,
 pins.setPull(DigitalPin.P8, PinPullMode.PullUp)
 music.setVolume(125)
 music.startMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once)
-game.startCountdown(60000)
+game.startCountdown(10000)
 game.setScore(0)
 basic.forever(function () {
-    if (pins.digitalReadPin(DigitalPin.P8) == 1) {
+    serial.writeLine("" + (pins.digitalReadPin(DigitalPin.P8)))
+    if (pins.digitalReadPin(DigitalPin.P8) == 0) {
         music.startMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once)
         basic.showLeds(`
             # # # # #
